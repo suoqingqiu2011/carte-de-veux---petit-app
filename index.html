@@ -25,15 +25,19 @@ canvas {
   bottom: 10px;
   color: #ccc
 }
+  /*start text*/
+	#text{width:500px;height:200px;color:#fff;margin:auto;font-size:24px;font-family:"方正喵呜体";}
+	/*end text*/
 </style>
-  <script src="jquery.min.js"></script>
-    <!--雪花-->
-    <script src="snow.js"></script>
 <body>
-    <canvas id="pinkboard"></canvas>
-    
-    
-    <script>
+   <canvas id="pinkboard"></canvas>
+    <div class="top">
+	<marquee behavior="alternate">时光不老，我们不散</marquee>
+</div>
+    <!--start text-->
+<div id="text"></div>
+<!--end text-->
+    <script> 
        
 /*
  * Settings
@@ -275,5 +279,6 @@ var ParticlePool = (function() {
  
  
     </script>
+  
 </body>
 </html>
