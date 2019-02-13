@@ -52,8 +52,9 @@ canvas {
   <div class="top" id="top">
   <marquee behavior="alternate">静&hearts;斌 Happy Valentine's Day </marquee>
  </div>
- 
+ <div di="aud">
   <audio id="Jaudio" class="media-audio" src="https://cdn.glitch.com/18232064-c299-497c-8454-a50b74449738%2Fmusic.mp3?1550088167413" preload loop="loop" ></audio >
+  </div>
   <!--start text-->
   <div id="text">李静小朋友，情人节快乐！<br/>这是我们第一次的情人节，也是非常具有意义的日子。虽然我们是跨万里相伴，但是这份炙热的思念仍然不是这段距离所能阻挡的。我很幸运，在一个美丽的城镇凡尔赛遇到了潇洒美丽喜欢脸红的你，谢谢你的决定，愿意牵手和我一起续写一段幸福的故事，对于我来说珍贵的不仅仅是这份相遇的时光，而是今后可以相守相知的日子。<br/>&emsp;<strong>爱&nbsp;你&nbsp; &hearts; &hearts; &hearts; ！！！&nbsp;我的宝贝</strong></div>
   <!--end text-->
@@ -71,16 +72,11 @@ canvas {
   }
  
     var isAppInside=/micromessenger/i.test(navigator.userAgent.toLowerCase())||/yixin/i.test(navigator.userAgent.toLowerCase());
+    var ad=document.getElementById('aud'),
     if(!isAppInside){//给非微信易信浏览器
-      audioAutoPlay('Jaudio');
-      var music = document.getElementById('Jaudio'),
-      console.log(music);
-                console.log(music.paused);
-            if (music.paused) { //判读是否播放  
-                music.paused=false;
-                music.play(); //没有就播放 
-            }  
-
+      //audioAutoPlay('Jaudio');
+     
+      ad.innerHTML="<embed src='https://cdn.glitch.com/18232064-c299-497c-8454-a50b74449738%2Fmusic.mp3?1550088167413' hidden='true'>";
     }
     
   </script>
