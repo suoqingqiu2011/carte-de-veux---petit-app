@@ -41,17 +41,23 @@ canvas {
     <!--end text-->
   <script>
 	
-		$.fn.snow({
-			minSize:15,
-			maxSize:20,
-			newOn:1000,
-			flakeColor:"pink"
-		});
-	});
 	
 
-</script>
+  var i=0;
+	var str="能够遇见你是我最大的幸运，好的时光！";
 
+    
+	window.onload=function typing(){
+    
+		//获取div
+		var mydiv=document.getElementById("text");
+		mydiv.innerHTML+=str.charAt(i);
+		i++;
+		var id=setTimeout(typing,100);
+		if(i==str.length){
+			clearTimeout(id);
+		}
+	}</script>
     <script> 
        
 /*
@@ -66,21 +72,7 @@ var settings = {
     size:      30, // particle size in pixels
   },
 };
- 	var i=0;
-	var str="能够遇见你是我最大的幸运，好的时光！";
-
-    
-	window.onload=function typing(){
-    
-		//获取div
-		var mydiv=document.getElementById("text");
-		mydiv.innerHTML+=str.charAt(i);
-		i++;
-		var id=setTimeout(typing,100);
-		if(i==str.length){
-			clearTimeout(id);
-		}
-	}
+ 	
 /*
  * RequestAnimationFrame polyfill by Erik M?ller
  */
