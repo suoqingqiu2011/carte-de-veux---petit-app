@@ -50,14 +50,13 @@ canvas {
 
   var i=0;
 	var str="能够遇见你是我最大的幸运，好的时光!";
- 
 	window.onload=function typing(){
     
 		//获取div
 		var mydiv=document.getElementById("text");
 		mydiv.innerHTML+=str.charAt(i);
-		i++; 
-		var id=setInterval(typing,50);
+		i+=1; 
+		var id=setInterval(typing,100);
 		if(i==str.length){
 			clearInterval(id);
 		}
