@@ -49,21 +49,7 @@ canvas {
 		});
 	});
 	
-	var i=0;
-	var str="能够遇见你是我最大的幸运，有了你生活变得丰富多彩，有了你，世界变得如此迷人；你是我的世界，我的世界是你，对我来说，不是在最美好的时光遇见了你，而是遇见你后都是最美好的时光！";
-	var mydiv=document.getElementById("text");
-		mydiv.innerHTML+=str.charAt(i);
-    
-	window.onload=function typing(){
-		//获取div
-		var mydiv=document.getElementById("text");
-		mydiv.innerHTML+=str.charAt(i);
-		i++;
-		var id=setTimeout(typing,100);
-		if(i==str.length){
-			clearTimeout(id);
-		}
-	}
+
 </script>
 
     <script> 
@@ -75,12 +61,25 @@ var settings = {
   particles: {
     length:   500, // maximum amount of particles
     duration:   2, // particle duration in sec
-    velocity: 100, // particle velocity in pixels/sec
+    velocity: 200, // particle velocity in pixels/sec
     effect: -0.75, // play with this for a nice effect
     size:      30, // particle size in pixels
   },
 };
- 
+ 	var i=0;
+	var str="能够遇见你是我最大的幸运，有了你生活变得丰富多彩，有了你，世界变得如此迷人；你是我的世界，我的世界是你，对我来说，不是在最美好的时光遇见了你，而是遇见你后都是最美好的时光！";
+
+    
+	window.onload=function typing(){
+		//获取div
+		var mydiv=document.getElementById("text");
+		mydiv.innerHTML+=str.charAt(i);
+		i++;
+		var id=setTimeout(typing,100);
+		if(i==str.length){
+			clearTimeout(id);
+		}
+	}
 /*
  * RequestAnimationFrame polyfill by Erik M?ller
  */
