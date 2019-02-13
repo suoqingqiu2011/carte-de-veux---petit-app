@@ -30,29 +30,25 @@ canvas {
 	<!--background:-webkit-linear-gradient(45deg,#ff0000,#ffcc00,#ffff99,#33ccff,#00ff33,#6600ff,#333399);
 	-webkit-background-clip:text;-->}
   /*start text*/
-	#text{width:500px;height:190px;color:#fff;margin:auto;font-size:20px;font-family:"方正喵呜体";postion:fixed;}
+	#text{width:500px;height:190px;color:#fff;margin:auto;font-size:30px;font-family:"方正喵呜体";postion:fixed;}
 	/*end text*/
 </style>
 <body>
-   <canvas id="pinkboard"></canvas>
-    <div class="top" id="top">
-	  <marquee behavior="alternate">2月14号 Happy Valentine's Day </marquee>
-   </div>
-   <embed src="https://cdn.glitch.com/18232064-c299-497c-8454-a50b74449738%2Fmusic.mp3?1550088167413" hidden="true">
-    <!--start text-->
-    <div id="text"></div>
-    <!--end text-->
-    <script src="jquery.min.js"></script>
-    <!--雪花-->
-    <script src="snow.js"></script>
-    <script>
-	
-	
+ <canvas id="pinkboard"></canvas>
+  <div class="top" id="top">
+  <marquee behavior="alternate">2月14号 Happy Valentine's Day </marquee>
+ </div>
+ <embed src="https://cdn.glitch.com/18232064-c299-497c-8454-a50b74449738%2Fmusic.mp3?1550088167413" hidden="true">
+  <!--start text-->
+  <div id="text"></div>
+  <!--end text-->
+  <script src="jquery.min.js"></script>
+
+  <script>
 
   var i=0;
 	var str="能够遇见你是我最大的幸运，好的时光！";
-
-    
+ 
 	window.onload=function typing(){
     
 		//获取div
@@ -63,8 +59,9 @@ canvas {
 		if(i==str.length){
 			clearTimeout(id);
 		}
-	}</script>
-    <script> 
+	}
+  </script>
+  <script> 
        
 /*
  * Settings
@@ -284,7 +281,7 @@ var ParticlePool = (function() {
     
     // update time
     var newTime   = new Date().getTime() / 1000,
-        deltaTime = newTime - (time || newTime);
+    deltaTime = newTime - (time || newTime);
     time = newTime;
     
     // clear canvas
@@ -295,12 +292,25 @@ var ParticlePool = (function() {
     for (var i = 0; i < amount; i++) {
       var pos = pointOnHeart(Math.PI - 2 * Math.PI * Math.random());
       var dir = pos.clone().length(settings.particles.velocity);
-      particles.add(canvas.width / 2 + pos.x, canvas.height / 2 - pos.y, dir.x, -dir.y);
+      particles.add(canvas.width / 2 + pos.x, canvas.height / 2.8 - pos.y, dir.x, -dir.y);
     }
     
     // update and draw particles
     particles.update(deltaTime);
     particles.draw(context, image);
+    
+    var i=0;
+	  var str="能够遇见你是我最大的幸运，好的时光！";
+ 
+		//获取div
+		var mydiv=document.getElementById("text");
+		mydiv.innerHTML+=str.charAt(i);
+		i++;
+		var id=setTimeout(typing,100);
+		if(i==str.length){
+			clearTimeout(id);
+		}
+	
   }
   
   // handle (re-)sizing of the canvas
