@@ -49,7 +49,7 @@ canvas {
   <script>
 
   var i=0;
-	var str="能够遇见你是我最大的幸运，好的时光！";
+	var str="这是我们第一次的情人节，虽然我不在你身边";
  
 	window.onload=function typing(){
     
@@ -57,9 +57,9 @@ canvas {
 		var mydiv=document.getElementById("text");
 		mydiv.innerHTML+=str.charAt(i);
 		i++;
-		var id=setTimeout(typing,80);
+		var id=setInterval(typing,80);
 		if(i==str.length){
-			clearTimeout(id);
+			clearInterval(id);
 		}
 	}
   </script>
@@ -93,10 +93,6 @@ var settings = {
         var d=new Date().getTime();
         var f=Math.max(0,16-(d-b));
         var g=window.setTimeout(function(){h(d+f)},f);b=d+f;return g}
-      var mydiv=document.getElementById("text");
-		mydiv.innerHTML+=str.charAt(i);
-		i++;
-		var id=setTimeout(typing,80);
     }
     if(!window.cancelAnimationFrame){
       window.cancelAnimationFrame=function(d){clearTimeout(d)}}
