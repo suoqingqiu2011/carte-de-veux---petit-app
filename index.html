@@ -25,18 +25,47 @@ canvas {
   bottom: 10px;
   color: #ccc
 }
+  .top{width:400px;height:100px;margin:60px auto;font-size:30px;font-family:"华文行楷";color:#fff;
+	}
   /*start text*/
 	#text{width:500px;height:200px;color:#fff;margin:auto;font-size:24px;font-family:"方正喵呜体";}
 	/*end text*/
 </style>
 <body>
    <canvas id="pinkboard"></canvas>
-    <div class="top">
-	<marquee behavior="alternate">时光不老，我们不散</marquee>
-</div>
+    <div class="top" id="top">
+	  <p>时光不老，我们不散</p>
+   </div>
     <!--start text-->
-<div id="text"></div>
-<!--end text-->
+    <div id="text"></div>
+    <!--end text-->
+  <script>
+	
+		$.fn.snow({
+			minSize:15,
+			maxSize:20,
+			newOn:1000,
+			flakeColor:"pink"
+		});
+	});
+	
+	var i=0;
+	var str="能够遇见你是我最大的幸运，有了你生活变得丰富多彩，有了你，世界变得如此迷人；你是我的世界，我的世界是你，对我来说，不是在最美好的时光遇见了你，而是遇见你后都是最美好的时光！";
+	var mydiv=document.getElementById("text");
+		mydiv.innerHTML+=str.charAt(i);
+    
+	window.onload=function typing(){
+		//获取div
+		var mydiv=document.getElementById("text");
+		mydiv.innerHTML+=str.charAt(i);
+		i++;
+		var id=setTimeout(typing,100);
+		if(i==str.length){
+			clearTimeout(id);
+		}
+	}
+</script>
+
     <script> 
        
 /*
