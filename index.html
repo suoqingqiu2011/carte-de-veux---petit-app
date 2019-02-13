@@ -34,7 +34,9 @@ canvas {
 	/*end text*/
 </style>
 <body>
+  <div id="cav">
  <canvas id="pinkboard"></canvas>
+  </div>
   <div class="top" id="top">
   <marquee behavior="alternate">2月14号 Happy Valentine's Day </marquee>
  </div>
@@ -55,9 +57,9 @@ canvas {
 		var mydiv=document.getElementById("text");
 		mydiv.innerHTML+=str.charAt(i);
 		i++;
-		var id=setTimeout(typing,100);
+		var id=setInterval(typing,);
 		if(i==str.length){
-			clearTimeout(id);
+			clearInterval(id);
 		}
 	}
   </script>
@@ -298,19 +300,6 @@ var ParticlePool = (function() {
     // update and draw particles
     particles.update(deltaTime);
     particles.draw(context, image);
-    
-    var i=0;
-	  var str="能够遇见你是我最大的幸运，好的时光！";
- 
-		//获取div
-		var mydiv=document.getElementById("text");
-		mydiv.innerHTML+=str.charAt(i);
-		i++;
-		var id=setTimeout(typing,100);
-		if(i==str.length){
-			clearTimeout(id);
-		}
-	
   }
   
   // handle (re-)sizing of the canvas
@@ -321,10 +310,8 @@ var ParticlePool = (function() {
   window.onresize = onResize;
   
   // delay rendering bootstrap
-  setTimeout(function() {
-    onResize();
-    render();
-  }, 10);
+  setTimeout(function(){onResize();render();}, 10);
+  
 })(document.getElementById('pinkboard'));
  
  
