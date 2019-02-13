@@ -49,15 +49,15 @@ canvas {
   <script>
 
   var i=0;
-	var str="能够遇见你是我最大的幸运，好的时光！";
+	var str="能够遇见你是我最大的幸运，好的时光!";
  
 	window.onload=function typing(){
     
 		//获取div
 		var mydiv=document.getElementById("text");
 		mydiv.innerHTML+=str.charAt(i);
-		i++;
-		var id=setInterval(typing,);
+		i++; 
+		var id=setInterval(typing,50);
 		if(i==str.length){
 			clearInterval(id);
 		}
@@ -310,8 +310,7 @@ var ParticlePool = (function() {
   window.onresize = onResize;
   
   // delay rendering bootstrap
-  setTimeout(function(){onResize();render();}, 10);
-  
+  setTimeout(function() {onResize();render();}, 10);
 })(document.getElementById('pinkboard'));
  
  
