@@ -49,18 +49,13 @@ canvas {
   <script>
 
   var i=0;
-	var str="这是我们第一次的情人节，虽然我不在你身边";
+	var str="李静小朋友，情人节快乐！<br/>这是我们第一次的情人节，虽然我们不能在身边相伴度过，";
  
 	window.onload=function typing(){
     
 		//获取div
 		var mydiv=document.getElementById("text");
-		mydiv.innerHTML+=str.charAt(i);
-		i++;
-		var id=setInterval(typing,80);
-		if(i==str.length){
-			clearInterval(id);
-		}
+		mydiv.innerHTML+=str;
 	}
   </script>
   <script> 
