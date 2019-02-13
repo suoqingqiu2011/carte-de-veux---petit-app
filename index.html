@@ -52,7 +52,7 @@ canvas {
   <div class="top" id="top">
   <marquee behavior="alternate">静&hearts;斌 Happy Valentine's Day </marquee>
  </div>
- <div di="aud">
+ <div id="aud">
   <audio id="Jaudio" class="media-audio" src="https://cdn.glitch.com/18232064-c299-497c-8454-a50b74449738%2Fmusic.mp3?1550088167413" preload loop="loop" ></audio >
   </div>
   <!--start text-->
@@ -69,16 +69,14 @@ canvas {
         };
     audio.play();
     document.addEventListener("touchstart",play, false);
-  }
+    }
  
     var isAppInside=/micromessenger/i.test(navigator.userAgent.toLowerCase())||/yixin/i.test(navigator.userAgent.toLowerCase());
-    var ad=document.getElementById('aud'),
-    if(!isAppInside){//给非微信易信浏览器
-      //audioAutoPlay('Jaudio');
-     
-      ad.innerHTML="<embed src='https://cdn.glitch.com/18232064-c299-497c-8454-a50b74449738%2Fmusic.mp3?1550088167413' hidden='true'>";
-    }
     
+    if(!isAppInside){//给非微信易信浏览器
+      audioAutoPlay('Jaudio');     
+    }
+  
   </script>
 
   
