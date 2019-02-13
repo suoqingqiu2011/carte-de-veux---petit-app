@@ -28,7 +28,7 @@ canvas {
   .top{width:400px;height:100px;margin:60px auto;font-size:30px;font-family:"华文行楷";color:#fff;
 	}
   /*start text*/
-	#text{width:500px;height:190px;color:#fff;margin:auto;font-size:20px;font-family:"方正喵呜体";}
+	#text{width:500px;height:190px;color:#fff;margin:auto;font-size:20px;font-family:"方正喵呜体";postion:fixed;}
 	/*end text*/
 </style>
 <body>
@@ -71,11 +71,12 @@ var settings = {
 
     
 	window.onload=function typing(){
+    
 		//获取div
 		var mydiv=document.getElementById("text");
 		mydiv.innerHTML+=str.charAt(i);
 		i++;
-		var id=setTimeout(typing,10);
+		var id=setTimeout(typing,100);
 		if(i==str.length){
 			clearTimeout(id);
 		}
@@ -92,11 +93,13 @@ var settings = {
     }
     if(!window.requestAnimationFrame){
       window.requestAnimationFrame=function(h,e){
-        var d=new Date().getTime();var f=Math.max(0,16-(d-b));
+        var d=new Date().getTime();
+        var f=Math.max(0,16-(d-b));
         var g=window.setTimeout(function(){h(d+f)},f);b=d+f;return g}
     }
     if(!window.cancelAnimationFrame){
-      window.cancelAnimationFrame=function(d){clearTimeout(d)}}}());
+      window.cancelAnimationFrame=function(d){clearTimeout(d)}}
+  }());
  
 /*
  * Point class
