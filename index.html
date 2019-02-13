@@ -13,7 +13,7 @@
   padding: 0;
   margin: 0; 
   background:url("https://cdn.glitch.com/73058627-1426-4cc3-9343-f1ee92bde7f1%2F1.jpg?1550012170357");
-background-size:cover;
+  background-size:cover;backgrond-attachment:fixed;background-position:center;
 }
 canvas {
   position: absolute;
@@ -26,8 +26,9 @@ canvas {
   bottom: 10px;
   color: #ccc
 }
-  .top{width:400px;height:100px;margin:60px auto;font-size:30px;font-family:"华文行楷";color:#fff;
-	}
+  .top{width:666px;height:100px;margin:60px auto;font-size:35px;font-family:"华文行楷";color:#fff;
+	<!--background:-webkit-linear-gradient(45deg,#ff0000,#ffcc00,#ffff99,#33ccff,#00ff33,#6600ff,#333399);
+	-webkit-background-clip:text;-->}
   /*start text*/
 	#text{width:500px;height:190px;color:#fff;margin:auto;font-size:20px;font-family:"方正喵呜体";postion:fixed;}
 	/*end text*/
@@ -35,13 +36,16 @@ canvas {
 <body>
    <canvas id="pinkboard"></canvas>
     <div class="top" id="top">
-	  <p>时光不老，我们不散</p>
+	  <marquee behavior="alternate">2月14号 Happy Valentine's Day </marquee>
    </div>
-  <embed src="https://cdn.glitch.com/18232064-c299-497c-8454-a50b74449738%2Fmusic.mp3?1550088167413" hidden="true">
+   <embed src="https://cdn.glitch.com/18232064-c299-497c-8454-a50b74449738%2Fmusic.mp3?1550088167413" hidden="true">
     <!--start text-->
     <div id="text"></div>
     <!--end text-->
-  <script>
+    <script src="jquery.min.js"></script>
+    <!--雪花-->
+    <script src="snow.js"></script>
+    <script>
 	
 	
 
