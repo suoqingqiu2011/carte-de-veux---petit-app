@@ -3,7 +3,7 @@
 		var $flake=$('<div id="flake"/>').css({
 			'position':'absolute',
 			'top':'50px'
-		}).html('静 &hearts; 斌'),
+		}).html('静 <span>&hearts;</span> 斌'),
 		documentHeigth=$(document).height(),
 		documentWidth=$(document).width(),
 		defaults={
