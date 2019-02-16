@@ -84,7 +84,7 @@ span{
   </script>
   <script>
     function audioAutoPlay(id){//全局控制播放函数
-    var audio = document.getElementById(id),
+    var audio = document.getElementById(id);
         play = function(){
             audio.play();
             document.removeEventListener("touchstart",play, false);
