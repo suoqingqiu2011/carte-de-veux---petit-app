@@ -373,6 +373,12 @@ var ParticlePool = (function() {
 		if(i==str.length){
 			clearTimeout(id);
 		}
+    
+    var s = "♥";
+    var t1=document.getElementById("text");
+    var strs= document.getElementById('text').innerHTML;
+    var n = strs.split(s).join("<font color='red'>"+ s +"</font>");
+    t1.innerHTML= n;
 	}
   
   // handle (re-)sizing of the canvas
